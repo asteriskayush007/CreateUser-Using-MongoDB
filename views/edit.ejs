@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+      <form action="/update/<%= user._id %>" method="post" class="">
+        <center>
+          <h1 class="text-3xl tracking-tighter mb-5">Edit Account</h1>
+        </center>
+
+        <div class="userpage mb-10 nav">
+          <a class="text-blue-500" href="/read">Read Users</a>
+        </div>
+        <input
+          class="px-5 py-2 rounded-lg outline-none bg-transparent border-2 border-zinc-800"
+          name="name"
+          type="text"
+          placeholder="Your Name"
+          value="<%= user.name %>"
+        />
+        <input
+          class="px-5 py-2 rounded-lg outline-none bg-transparent border-2 border-zinc-800"
+          name="email"
+          type="text"
+          placeholder="Email"
+          value="<%= user.email %>"
+        />
+        <input
+          class="px-5 py-2 rounded-lg outline-none bg-transparent border-2 border-zinc-800"
+          name="password"
+          type="password"
+          placeholder="Password"
+          value="<%= user.password %>"
+        />
+        <input
+          class="px-5 py-2 rounded-lg outline-none bg-transparent border-2 border-zinc-800"
+          name="imgurl"
+          type="text"
+          placeholder="Image Url"
+          value="<%= user.imgurl %>"
+        />
+        <input
+          type="submit"
+          value="Update User"
+          href="/read"
+          class="px-5 py-2 rounded-lg ml-3 outline-none bg-yellow-500 text-black"
+        />
+      </form>
+    </div>
+  </body>
+</html>
